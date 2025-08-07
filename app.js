@@ -6,7 +6,7 @@ function agregarAmigo() {
     // Validación para evitar nombres vacíos
     if (amigo === '') {
         input.classList.add('error');
-        alert('Por favor, ingresa un nombre de amigo.');
+        alert('Por favor, ingresa un nombre de amigo valido.');
         return;
     }else {
         input.classList.remove('error');
@@ -62,6 +62,6 @@ document.getElementById('listaAmigos').addEventListener('click', function(event)
         amigos.splice(amigos.indexOf(event.target.textContent), 1);
         console.log(amigos);
     
-        console.log(amigos);
+        //console.log(amigos);
     }
 });
