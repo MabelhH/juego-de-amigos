@@ -52,7 +52,7 @@ function sortearAmigo() {
     resultado.textContent = `El amigo secreto sorteado es: ${amigoSorteado}`;
     resultado.style.display = 'block';
     console.log(`El amigo secreto sorteado es: ${amigoSorteado}`);
-    document.getElementById('Sortear').setAttribute('disabled');
+    //document.getElementById('Sortear').setAttribute('disabled');
     document.getElementById('reiniciar').removeAttribute('disabled');
 
 }
