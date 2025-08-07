@@ -42,23 +42,32 @@ function sortearAmigo() {
         reiniciarJuego();
         return;
     }
-
+    
+    document.getElementById('reiniciar').disabled = false;
+    
     let indiceAleatorio = Math.floor(Math.random() * amigos.length);
     let amigoSorteado = amigos[indiceAleatorio];
 
     let resultado = document.getElementById('resultadoSorteo');
     resultado.textContent = `El amigo secreto sorteado es: ${amigoSorteado}`;
+    resultado.style.display = 'block';
     console.log(`El amigo secreto sorteado es: ${amigoSorteado}`);
+    document.getElementById('Sortear').setAttribute('disabled');
     document.getElementById('reiniciar').removeAttribute('disabled');
 
 }
 
 function reiniciarJuego() {
     // Aquí restableces el estado inicial del juego.
-    amigos = []; // Si quieres dejarlo vacío explícitamente
+    amigos = []; // Vaciar el array
     limpiarImput();
     limpiarresultado();
-    document.querySelector('#reiniciar').setAttribute('disabled','true');
+
+    // Borrar la lista de <li> visualmente
+    document.getElementById('listaAmigos').innerHTML = '';
+
+    // Desactivar el botón de reinicio
+    document.getElementById('reiniciar').disabled = true;
 }
 
 

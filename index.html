@@ -29,16 +29,15 @@
 
             <p id="resultadoSorteo" ></p>
             <div class="button-container">
-                <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
+                <button class="button-draw" id="Sortear" onclick="sortearAmigo()" aria-label="Sortear amigo secreto" enabled>
                     <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
                     Sortear amigo
                 </button>
             </div>
-            <div class="button-container">
-                <button class="button-reset" onclick="reiniciarJuego()" aria-label="Reiniciar juego" disabled>Nuevo juego
-                    Reiniciar juego
-                </button>
-            </div>
+            <button id="reiniciar" onclick="reiniciarJuego()" disabled>
+                Reiniciar juego
+            </button>
+            
             
         </section>
     </main>
