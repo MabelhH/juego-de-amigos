@@ -132,6 +132,7 @@ ul {
     font-family: "Inter", sans-serif;
     font-size: 18px;
     margin: 20px 0;
+    text-transform: capitalize;
 }
 
 .result-list {
@@ -159,4 +160,14 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+
+input:valid {
+  border: 2px solid rgb(31, 160, 111);
+}
+
+
+input.error {
+      border-color: red;
 }
