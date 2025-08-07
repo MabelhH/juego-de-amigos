@@ -39,6 +39,7 @@ function sortearAmigo() {
    if (amigos.length === 0) {
         alert('La lista de amigos está vacía.');
         limpiarresultado();
+        reiniciarJuego();
         return;
     }
 
@@ -48,9 +49,16 @@ function sortearAmigo() {
     let resultado = document.getElementById('resultadoSorteo');
     resultado.textContent = `El amigo secreto sorteado es: ${amigoSorteado}`;
     console.log(`El amigo secreto sorteado es: ${amigoSorteado}`);
+    document.getElementById('reiniciar').removeAttribute('disabled');
 
+}
 
-
+function reiniciarJuego() {
+    // Aquí restableces el estado inicial del juego.
+    amigos = []; // Si quieres dejarlo vacío explícitamente
+    limpiarImput();
+    limpiarresultado();
+    document.querySelector('#reiniciar').setAttribute('disabled','true');
 }
 
 
