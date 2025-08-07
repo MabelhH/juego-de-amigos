@@ -90,6 +90,7 @@ body {
 .button-container {
     width: 300px;
     justify-content: center;
+    margin-top: 20px;
 }
 
 /* Estilos de entrada de texto */
@@ -171,3 +172,12 @@ input:valid {
 input.error {
       border-color: red;
 }
+
+#resultadoSorteo {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(63, 190, 63);
+    margin-top: 2px;
+    font-family: "Inter", serif;
+}
+
